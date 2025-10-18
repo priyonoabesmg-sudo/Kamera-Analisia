@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KALENDER ABADI 1600 - 2100</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app-container">
+    <header>
+      <h1>KALENDER ABADI 1600 - 2100</h1>
+    </header>
+    <main>
+      <div id="controls">
+        <h2>Panel Kontrol</h2>
+        <div class="control-group">
+          <label for="title1">Judul Baris 1:</label>
+          <input type="text" id="title1" placeholder="Masukkan judul pertama">
+        </div>
+        <div class="control-group">
+          <label for="title2">Judul Baris 2:</label>
+          <input type="text" id="title2" placeholder="Masukkan judul kedua">
+        </div>
+        <div class="control-group">
+          <label for="title3">Judul Baris 3:</label>
+          <input type="text" id="title3" placeholder="Masukkan judul ketiga">
+        </div>
+        <div class="control-group">
+          <label for="year-select">Pilih Tahun:</label>
+          <select id="year-select"></select>
+        </div>
+        <div class="control-group">
+          <label for="bg-image-input">Pilih Gambar Latar:</label>
+          <input type="file" id="bg-image-input" accept="image/*">
+        </div>
+        <div class="control-group">
+          <label for="opacity-slider">Transparansi Gambar: <span id="opacity-value">100</span>%</label>
+          <input type="range" id="opacity-slider" min="0" max="100" value="100">
+        </div>
+        <button id="generate-btn" aria-label="Buat Kalender">Buat Kalender</button>
+      </div>
+      <div id="preview-area">
+        <h2>Pratinjau Kalender</h2>
+        <canvas id="calendar-canvas"></canvas>
+        <button id="download-btn" class="hidden" aria-label="Unduh Kalender">Unduh Kalender</button>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="index.tsx"></script>
+</body>
+</html>
